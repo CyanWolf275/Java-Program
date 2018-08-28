@@ -6,6 +6,6 @@ public class ifx2 {
 		}
 		if (a==1) {
 			System.out.println("a=1");
-		}
+		}//These are two separate if clauses. They are operated separately. 
 	}
 }
