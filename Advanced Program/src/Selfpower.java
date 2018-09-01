@@ -25,7 +25,7 @@ public class Selfpower {
             	if (pro<pro2) {
             		int progress = 100-Integer.valueOf(ab);
             		double prog = (double)progress/0.9;
-            		System.out.println("\b\b\b"+(int)prog+"%");//Progress monitor
+            		System.out.println((int)prog+"%");//Progress monitor
             	}
                 String[] arr = Long.toString(i).split("");//To array
             	for(long j = power;j>0;j--) {
