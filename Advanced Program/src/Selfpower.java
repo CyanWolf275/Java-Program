@@ -11,7 +11,7 @@ public class Selfpower {
 	static int pro2;
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in); 
-        System.out.println("Range: "); 
+        System.out.print("Range: "); 
         String A = s.nextLine();//Input range
         range=Long.parseLong(A);
         power = (long)A.length();//Level of power according to the number of digits
