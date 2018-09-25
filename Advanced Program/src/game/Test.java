@@ -18,6 +18,13 @@ public class Test {
 			return r+1;
 		}
 	}
+	public static int check(int a) {
+		if (a==-1) {
+			return 0;
+		}else {
+			return a;
+		}
+	}
 	public static void main(String[] args) {
 		Player[] p= new Player[6];
 		Player p0 = new Player();
@@ -34,17 +41,28 @@ public class Test {
 		p[5]=p5;
 		boolean x = true;
 		int pl = -1;
+		int prev = 0;
 		for (int i=1;i<100;i++) {
 			if (x==true) {
+				prev = pl;
 				pl = plus(pl);
-				if(p[pl].run(i)==2) {
+				/*if (p[pl].alive==false) {
+					i = i-1;
+					continue;
+				}*/
+				if(p[pl].run(i,p[check(prev)])==2) {
 					x=!x;
 				}
 				System.out.print(i+": ");
 				System.out.println("Player: "+pl+" Alive: "+p[pl].alive+" Points: "+p[pl].point+" Skip: "+p[pl].skip+" Turn: "+p[pl].turn);
 			}else {
+				prev = pl;
 				pl = minus(pl);
-				if(p[pl].run(i)==2) {
+				/*if (p[pl].alive==false) {
+					i = i-1;
+					continue;
+				}*/
+				if(p[pl].run(i,p[check(prev)])==2) {
 					x=!x;
 				}
 				System.out.print(i+": ");
