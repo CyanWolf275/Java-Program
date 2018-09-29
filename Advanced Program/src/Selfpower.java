@@ -44,6 +44,7 @@ public class Selfpower {
             	pro2 = Integer.valueOf(cd);//Progress monitor
             }
         }catch(ArrayIndexOutOfBoundsException e) {//Only run in range's digit
+        	s.close();
         	System.out.println("End");
         }
 	}
